@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load staticfiles %}
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
+
+
+<form method="post" class= 'form-inline' >
+	{% csrf_token %}
+	<h3 style="color: #00FFFF;"> Twitter APP</h3>
+    <p><input type="text" class= 'form-control' name='keyword' id = 'keyword' placeholder='keyword' required>
+   	<button class='btn btn-primary' id='submit'>Submit</button>
+   	</p>
+</form>
+
+{% endblock %}

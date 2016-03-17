@@ -1,0 +1,49 @@
+﻿{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script>
+
+
+
+
+<title>tweet template</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<style>
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+    h4 .emoji {
+      width: 11px;
+      height: 11px;
+      margin-bottom: -8px;
+    }
+
+    .emoji {
+      border: 0;
+      width: 36px;
+      height: 36px;
+      margin-bottom: -2px;
+    }
+
+</style>
+</head>
+
+<body style="background:#ECECEC">
+<br/>
+<div class="container">
+
+ </div>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

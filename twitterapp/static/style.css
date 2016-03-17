@@ -1,0 +1,95 @@
+body {
+    background: url(blackpic.jpg);
+    font: Georgia, Serif;
+}
+
+h3{
+	margin-top: 1%;
+	text-align: center;
+}
+
+form{
+	margin-top: 2%;
+	text-align: center;
+	border-style: dashed;
+	border:0px solid black;
+}
+
+#id_two{
+	border: 0px solid #fff;
+	border-bottom-color: #66a9bd;
+	background: #66a9bd;
+}
+
+div.dataTables_length {
+    float: left;
+    background-color:  #66a9bd;
+}
+ 
+div.dataTables_filter {
+    float: right;
+    background-color: #66a9bd;
+}
+ 
+div.dataTables_info {
+    float: left;
+    background-color: #66a9bd;
+}
+ 
+div.dataTables_paginate {
+    float: right;
+    background-color: #66a9bd;
+}
+ 
+div.dataTables_length,
+div.dataTables_filter,
+div.dataTables_paginate,
+div.dataTables_info {
+    padding: 6px;
+}
+
+table.pretty {
+    clear: both;
+}
+ 
+/* Self clearing - */
+div.dataTables_wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+table.pretty td,
+table.pretty th {
+    padding: 5px;
+    border: 0px solid #fff;
+}
+
+/* Header cells */
+table.pretty thead th {
+    text-align: left;
+    background: #66a9bd;
+}
+
+/* Body cells */
+table.pretty tbody th {
+    text-align: left;
+    background: #d5eaf0;
+}
+ 
+table.pretty tbody td {
+    text-align: left;
+    background: #d5eaf0;
+}
+ 
+table.pretty tbody tr.odd td {
+    background: #bcd9e1;
+}
+
+div.dataTables_wrapper {
+    background-color: #66a9bd;
+}
+

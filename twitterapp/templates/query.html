@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load staticfiles %}
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+ <!--data table-->
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css"/>
+  <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $keyword = "{{ keyword | safe }}"
+  
+</script>
+
+<!-- Javascript -->
+<script src="{% static 'script.js' %}"></script>
+
+<h3 style='color:#00FFFF;'> Live Twitter Data </h3>
+
+<div id='data'></div>
+
+{% endblock %}

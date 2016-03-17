@@ -1,0 +1,105 @@
+﻿{% block content %}
+{% for tweet in tweets %}	
+	<!--tweet-->
+    <div class="panel panel-default" id="{{ tweet.tweet_id }}"> 
+        <!--tweet body-->
+        <div class="panel-body">
+            <!--user profile summry-->
+            <div class="vertical-align" style=" margin-bottom:20px; padding:10px 10px 10px 10px;">
+                <div style="float:left;">
+                    <img src="{{ tweet.img }}" class="img-circle" alt="Cinque Terre" width="50" height="50" id="userpic">
+                </div>
+                <div class="" style=" margin-left:15px;">
+                    <h4 style="font-size:18px;">
+                        <b id="username">{{ tweet.username }}</b>
+                        <br/>
+                        <small>
+                            <a href="https://twitter.com/{{ tweet.screen_name }}" ><span id="screen_name">@{{ tweet.screen_name }}</span></a>   -   <a href="https://twitter.com/{{ tweet.screen_name }}/status/{{ tweet.tweet_id }}" ><span id="time">{{ tweet.created_at }}</span></a>
+                        </small>
+                    </h4>
+                </div>
+            </div>
+            <!--end user profile summry-->
+            <!--tweet text-->
+            <p id="tweetText" style="font-size:26px; padding:0px 10px 10px 20px;">
+		{{ tweet.text }}
+            </p>
+            <!--end tweet text-->
+            
+            <!--tweet image contant-->
+            <!--
+            <div class="row">
+                <img src="1.jpg"  alt="Cinque Terre" width="100%" >
+            </div>
+            -->
+            <!--end tweet image contant-->
+        </div>
+        <!--end tweet body-->
+        
+        <!--tools lables-->
+        <div class="panel-heading container-fluid">
+            <div class="row"  id="formlable"  style="display: none;">
+            <form role="form" method="get">
+            <div class="col-sm-3 form-group">
+            <label for="sentiment">Sentiment: </label>
+              <select class="form-control" id="sentiment" name="sentiment">
+                <option value="Happy">😄 Happy</option>
+                <option value="Joyful">😂 Joyful</option>
+                <option value="Silly">😜 Silly</option>
+                <option value="Neutra">😐 Neutral</option>
+                <option value="Sad">😢 Sad</option>
+                <option value="Angry">😠 Angry</option>
+                <option value="Worried">😟 Worried</option>
+              </select>
+            </div>
+            <div class="col-sm-3 form-group">
+            <label for="mainTopic">Topic (Main): </label>
+            <!--
+            <button type="button" class="btn btn-link btn-xs" aria-label="Left Align">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                  </span>
+              </button>-->
+              <select class="form-control" id="mainTopic"  name="mainTopic">
+            
+              </select>
+              
+            </div>
+            <div class="col-sm-3 form-group" >
+            <label for="subTopic"> (Sub): </label>
+            <!--
+            <button type="button" class="btn btn-link btn-xs" aria-label="Left Align">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true">
+                  </span>
+              </button>-->
+              <select class="form-control" id="subTopic" name="subTopic" disabled>
+  
+              </select>
+            </div>
+            <div class="col-sm-3 form-group" >
+            <label for="submit"></label>
+            <input type="button" id="submit" class="btn btn-info form-control" value="Submit" name="submit" disabled>
+            </div>
+            </form>
+            </div>
+            <!--label-->
+            <div id="lable">
+            
+
+            <b>Sentiment: </b>
+            <span class="SentimentR">{{ tweet.sent }}</span>
+           
+            <b>Topic (Main): </b>
+            <span class="mainTopicR">{{ tweet.main }}</span>
+            
+            <b> (Sub): </b>
+            <span class="subTopicR">{{ tweet.subt }}</span>
+
+            </div>
+            <!--end lable-->
+        </div>
+        <!--end tweet lables-->
+    </div>
+    <!--end tweet-->
+
+{% endfor %}
+{% endblock %}
